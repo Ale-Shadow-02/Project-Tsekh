@@ -1,5 +1,7 @@
 /* Script WEBP */
 
+'jshint -W069';
+
 function testWebP(callback) {
 
   var webP = new Image();
@@ -51,7 +53,8 @@ $(document).ready(function () {
 // e.x. data-da="item,2,992"
 // Andrikanych Yevhen 2020
 // https://www.youtube.com/c/freelancerlifestyle
-
+/* jshint -W069*/
+/* jshint -W083*/
 
 
 (function () {
