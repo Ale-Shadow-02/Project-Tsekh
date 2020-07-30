@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+/* Подключение шрифтов */
+
+/* Адаптивный шрифт */
+
 /*Обнуление*/
 
 * {
@@ -90,15 +94,50 @@ h6 {
   font-weight: 400;
 }
 
-/*Обнуление стилей*/
+/* Подключение шрифтов */
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  font-display: swap;
+  src: url("../fonts/Gilroy-SemiBold.woff") format("woff"), url("../fonts/Gilroy-SemiBold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Общие стили для всего проекта */
+
+body {
+  font-family: Gilroy, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #333333;
+}
+
+.header__container {
+  max-width: 1562px;
+}
+
+.main__container {
+  max-width: 1180px;
+}
 
 /* Стили мобильного меню */
-
-.container {
-  max-width: 1180px;
-  margin: 0px auto;
-  padding: 0px 10px;
-}
 
 .header {
   position: fixed;
@@ -115,7 +154,19 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #5e5373;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.header__container {
+  margin: 0px auto;
+  padding: 0px 10px;
+}
+
+.header__menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   z-index: 2;
 }
 
@@ -127,7 +178,7 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 80px;
+  height: 100px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -135,9 +186,9 @@ h6 {
 
 .header__logo {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 60px;
-          flex: 0 0 60px;
-  border-radius: 50%;
+      -ms-flex: 0 0 135px;
+          flex: 0 0 135px;
+  height: 43px;
   overflow: hidden;
   position: relative;
   z-index: 3;
@@ -156,19 +207,158 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 2;
 }
 
 .header__list li {
-  margin: 0px 0px 0px 20px;
+  margin: 0px 0px 0px 5%;
+}
+
+.header__list li:first-child {
+  margin: 0px 0px 0px 0px;
 }
 
 .header__link {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 18px;
-  text-decoration: none;
+  color: #333333;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.100962px;
+  position: relative;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.header__link:before {
+  content: "";
+  width: 0;
+  height: 0.1em;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  background: #3454F5;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header__link:hover:before {
+  width: 100%;
+  left: 0;
+  background: #3454F5;
+}
+
+.header__button {
+  color: #333333;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  padding: 12px 40px;
+  border: 2px solid #333333;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 3;
+}
+
+.header__button:hover {
+  background-color: #3454f5;
+  color: #ffffff;
+  border: 2px solid #3454f5;
+}
+
+.popup {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.open .popup__content {
+  -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+          transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 10px;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.popup__content {
+  background-color: #fff;
+  color: #333333;
+  max-width: 800px;
+  padding: 30px;
+  position: relative;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+          transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+
+.popup__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/close.png);
+  background-size: cover;
+}
+
+@media (max-width: 992px) {
+  .header__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 110px;
+            flex: 0 0 110px;
+  }
+
+  .header__list li {
+    margin: 0px 0px 0px 3%;
+  }
+
+  .header__link {
+    font-size: 15px;
+  }
+
+  .header__button {
+    padding: 8px 15px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -182,8 +372,8 @@ h6 {
 
   .header__logo {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 40px;
-            flex: 0 0 40px;
+        -ms-flex: 0 0 115px;
+            flex: 0 0 115px;
   }
 
   .header__burger {
@@ -197,7 +387,7 @@ h6 {
 
   .header__burger span {
     position: absolute;
-    background-color: #fff;
+    background-color: #333333;
     position: absolute;
     left: 0;
     width: 100%;
@@ -211,7 +401,7 @@ h6 {
   .header__burger:before,
   .header__burger:after {
     content: '';
-    background-color: #fff;
+    background-color: #333333;
     position: absolute;
     width: 100%;
     height: 2px;
@@ -259,7 +449,7 @@ h6 {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    background-color: #18b5a4;
+    background-color: #7de0d2;
     padding: 70px 10px 20px 10px;
   }
 
@@ -269,13 +459,24 @@ h6 {
 
   .header__list {
     display: block;
+    margin: 0px 0px 30px 0px;
   }
 
   .header__list li {
     margin: 0px 0px 20px 0px;
   }
 
+  .header__list li:first-child {
+    margin: 0px 0px 20px 0px;
+  }
+
   .header__link {
     font-size: 24px;
   }
+
+  .header__button {
+    padding: 15px 35px;
+  }
 }
+
+.webp .popup__close{ background-image: url(../img/close.webp); }
