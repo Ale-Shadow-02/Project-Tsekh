@@ -120,6 +120,18 @@ h6 {
   font-style: normal;
 }
 
+.btn {
+  border-radius: 5px;
+  background-color: #3454f5;
+  color: #ffffff;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 24px 0px;
+  width: 100%;
+}
+
 /* Общие стили для всего проекта */
 
 body {
@@ -318,10 +330,10 @@ body {
 }
 
 .popup__content {
-  background-color: #fff;
+  background-color: #eff7ff;
   color: #333333;
   max-width: 800px;
-  padding: 30px;
+  padding: 85px 65px;
   position: relative;
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
@@ -339,6 +351,61 @@ body {
   height: 30px;
   background-image: url(../img/close.png);
   background-size: cover;
+}
+
+.popup__title {
+  font-family: Gilroy;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  margin: 0px 0px 15px 0px;
+}
+
+.popup__subtitle {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  margin: 0px 0px 50px 0px;
+}
+
+.popup__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0px -10px;
+}
+
+.popup__block--item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  padding: 0px 10px;
+}
+
+.popup__politic {
+  color: #999999;
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.popup__politic--link {
+  text-decoration: underline;
+}
+
+.input {
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: 0px 0px 20px 0px;
+  padding: 25px 25px;
+  width: 100%;
 }
 
 @media (max-width: 992px) {
@@ -476,6 +543,19 @@ body {
 
   .header__button {
     padding: 15px 35px;
+  }
+
+  .popup__content {
+    padding: 50px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .popup__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
