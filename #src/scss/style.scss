@@ -13,7 +13,7 @@
 
 /* Адаптивный шрифт */
 
-$maxWidth: 1562px;
+$maxWidth: 1580;
 
 @mixin adaptiv-font($pcSize, $mobSize) {
 	$addSize: $pcSize - $mobSize;
@@ -37,7 +37,7 @@ body {
 
 .header {
 	&__container {
-		max-width: 1560px;
+		max-width: 1580px;
 	}
 }
 
