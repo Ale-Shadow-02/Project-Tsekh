@@ -15,3 +15,12 @@ $BodyFont: 18px;
    padding: 24px 0px;
    width: 100%;
 }
+
+.section {
+   &-title {
+      font-family: Gilroy;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 48px;
+   }
+}

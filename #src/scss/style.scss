@@ -43,10 +43,12 @@ body {
 
 .main {
 	&__container {
-		max-width: 1180px;
+		max-width: 1200px;
+		margin: 0 auto;
 	}
 }
 
 @import "mobile";
 @import "offer";
+@import "services";
 @import "popup";

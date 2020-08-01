@@ -133,6 +133,13 @@ h6 {
   width: 100%;
 }
 
+.section-title {
+  font-family: Gilroy;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
 /* Общие стили для всего проекта */
 
 body {
@@ -147,7 +154,8 @@ body {
 }
 
 .main__container {
-  max-width: 1180px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Стили мобильного меню */
@@ -483,6 +491,34 @@ body {
   margin: 0px auto;
 }
 
+.services {
+  padding: 170px 0px 183px 0px;
+}
+
+.services__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.services__title {
+  margin: 0px 0px 35px 0px;
+}
+
+.services__subtitle {
+  font-family: Gilroy;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0px 0px 40px 0px;
+}
+
+.services__img {
+  background: url("../img/box.png") 0 0/cover no-repeat;
+  width: 616px;
+  height: 581px;
+}
+
 .popup {
   position: fixed;
   z-index: 999;
@@ -811,5 +847,7 @@ body {
 .webp .offer__shutterstock{ background: url(../img/shutterstock.webp) center/cover no-repeat; }
 
 .webp .offer__cursor{ background: url(../img/cursor.webp) center/cover no-repeat; }
+
+.webp .services__img{ background: url(../img/box.webp) 0 0/cover no-repeat; }
 
 .webp .popup__close{ background-image: url(../img/close.webp); }

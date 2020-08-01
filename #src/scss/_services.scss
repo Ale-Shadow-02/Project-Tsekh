@@ -1,0 +1,50 @@
+.services {
+  padding: 170px 0px 183px 0px;
+
+  // .services__body
+  &__body {
+    display: flex;
+  }
+
+  // .services__column
+  &__column {}
+
+  // .services__column--img
+  &__column--img {}
+
+  // .services__title
+  &__title {
+    margin: 0px 0px 35px 0px;
+  }
+
+  // .services__subtitle
+  &__subtitle {
+    font-family: Gilroy;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 0px 0px 40px 0px;
+  }
+
+  // .services__img
+  &__img {
+    background: url('../img/box.png') 0 0/cover no-repeat;
+    width: 616px;
+    height: 581px;
+  }
+
+  // .services__column--text
+  &__column--text {}
+
+  // .services__item
+  &__item {}
+
+  // .services__item--icon
+  &__item--icon {}
+
+  // .services__item--title
+  &__item--title {}
+
+  // .services__item--text
+  &__item--text {}
+}
