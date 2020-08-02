@@ -1,21 +1,51 @@
 .services {
   padding: 170px 0px 183px 0px;
 
+  @media (max-width:1500px) {
+    padding: 50px 0px;
+  }
+
+  @media (max-width:576px) {
+    padding: 30px 0px;
+  }
+
   // .services__body
   &__body {
     display: flex;
+
+    @media (max-width:1500px) {
+      flex-direction: column;
+    }
   }
 
   // .services__column
-  &__column {}
+  &__column {
+    flex: 0 1 50%;
+
+    @media (max-width:1500px) {
+      flex: 0 1 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
   // .services__column--img
-  &__column--img {}
+  &__column--img {
+    padding: 0px 10px;
+  }
 
   // .services__title
   &__title {
     margin: 0px 0px 35px 0px;
+
+    @media (max-width:576px) {
+      font-size: 30px;
+      line-height: 30px;
+      margin: 0px 0px 15px 0px;
+    }
   }
+
 
   // .services__subtitle
   &__subtitle {
@@ -24,27 +54,81 @@
     font-weight: 400;
     line-height: 32px;
     margin: 0px 0px 40px 0px;
+
+    @media (max-width:576px) {
+      line-height: 25px;
+    }
   }
 
   // .services__img
   &__img {
-    background: url('../img/box.png') 0 0/cover no-repeat;
-    width: 616px;
-    height: 581px;
+    /* background: url('../img/box.png') 0 0/cover no-repeat; */
+    max-width: 616px;
+    transform: translateX(-160px);
+
+    @media (max-width:1500px) {
+      transform: translateX(0px);
+    }
   }
 
   // .services__column--text
-  &__column--text {}
+  &__column--text {
+    margin: 260px 0px 0px 0px;
+    padding: 0px 10px 0px 30px;
+
+    @media (max-width:1500px) {
+      margin: 100px 0px 0px 0px;
+    }
+  }
 
   // .services__item
-  &__item {}
+  &__item {
+    margin: 0px 0px 80px 0px;
+
+    @media (max-width:576px) {
+      margin: 0px 0px 30px 0px;
+    }
+
+    &:last-child {
+      margin: 0px 0px 0px 0px;
+    }
+  }
 
   // .services__item--icon
-  &__item--icon {}
+  &__item--icon {
+    width: 175px;
+    height: 123px;
+    margin: 0px 0px 23px 0px;
+
+    & img {
+      object-fit: cover;
+    }
+  }
 
   // .services__item--title
-  &__item--title {}
+  &__item--title {
+    font-family: Gilroy;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 0px 0px 15px 10px;
+  }
 
   // .services__item--text
-  &__item--text {}
+  &__item--text {
+    font-family: Gilroy;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0px 0px 0px 10px;
+  }
+}
+
+.main {
+  &__container--media {
+    @media (max-width:1500px) {
+      max-width: 650px;
+    }
+
+  }
 }
