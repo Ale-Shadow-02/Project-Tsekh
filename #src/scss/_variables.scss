@@ -24,3 +24,21 @@ $BodyFont: 18px;
       line-height: 48px;
    }
 }
+
+.item {
+   &-title {
+      font-family: Gilroy;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+   }
+}
+
+.block {
+   &__item--title {
+      font-family: Gilroy;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 40px;
+   }
+}

@@ -137,6 +137,20 @@ h6 {
   line-height: 48px;
 }
 
+.item-title {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.block__item--title {
+  font-family: Gilroy;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
 /* Общие стили для всего проекта */
 
 body {
@@ -561,10 +575,6 @@ body {
 }
 
 .services__item--text {
-  font-family: Gilroy;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 28px;
   margin: 0px 0px 0px 10px;
 }
 
@@ -641,6 +651,87 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.our-offer {
+  padding: 155px 0px 180px 0px;
+}
+
+.our-offer__title {
+  max-width: 435px;
+  margin: 0px 0px 60px 0px;
+}
+
+.our-offer__block {
+  margin: 0px 0px 150px 0px;
+}
+
+.our-offer__block:last-child {
+  margin: 0px 0px 0px 0px;
+}
+
+.block__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block__item--box {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 440px;
+          flex: 0 1 440px;
+  height: 477px;
+  -webkit-box-shadow: -10px 20px 40px rgba(0, 0, 0, 0.15);
+          box-shadow: -10px 20px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  border: 5px solid #3a3a3a;
+  background-color: #ffffff;
+  display: grid;
+  place-items: center;
+}
+
+.block__item--content {
+  width: 179px;
+  height: 57px;
+  background: url("../img/item-icon-1.png") 0 0/contain no-repeat;
+}
+
+.block__item--text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+  margin: 0px 0px 0px 81px;
+}
+
+.block__item--title {
+  margin: 0px 0px 15px 0px;
+}
+
+.block__item--paragraf {
+  max-width: 479px;
+  margin: 0px 0px 40px 0px;
+}
+
+.block__item--info {
+  position: relative;
+  padding: 0px 0px 0px 14px;
+}
+
+.block__item--info::before {
+  content: '+';
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #3454f5;
+}
+
+.block__catalog--content {
+  background: url("../img/item-icon-2.png") center/contain no-repeat;
+  width: 85%;
+  height: 100%;
 }
 
 .popup {
@@ -1066,5 +1157,9 @@ body {
 .webp .offer__cursor{ background: url(../img/cursor.webp) center/cover no-repeat; }
 
 .webp .banner__body{ background: url(../img/banner-bg.webp) 0 0/contain no-repeat; }
+
+.webp .block__item--content{ background: url(../img/item-icon-1.webp) 0 0/contain no-repeat; }
+
+.webp .block__catalog--content{ background: url(../img/item-icon-2.webp) center/contain no-repeat; }
 
 .webp .popup__close{ background-image: url(../img/close.webp); }
