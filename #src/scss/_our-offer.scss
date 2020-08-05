@@ -1,15 +1,31 @@
 .our-offer {
   padding: 155px 0px 180px 0px;
+  @media (max-width: 992px) {
+    padding: 30px 0px 60px 0px;
+  }
+
+  &__body {
+    @media (max-width: 1200px) {
+      padding: 0px 10px;
+    }
+  }
 
   // .our-offer__title
   &__title {
     max-width: 435px;
     margin: 0px 0px 60px 0px;
+    @media (max-width: 992px) {
+      margin: 30px auto 30px auto;
+      text-align: center;
+    }
   }
 
   // .our-offer__block
   &__block {
     margin: 0px 0px 150px 0px;
+    @media (max-width: 992px) {
+      margin: 0px 0px 30px 0px;
+    }
 
     &:last-child {
       margin: 0px 0px 0px 0px;
@@ -18,11 +34,16 @@
 }
 
 .block {
-
   // .block__body
   &__body {
     display: flex;
     align-items: center;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   // .block__item--box
@@ -35,25 +56,38 @@
     background-color: #ffffff;
     display: grid;
     place-items: center;
+
+    @media (max-width: 992px) {
+      width: 440px;
+      height: 477px;
+      flex: 0 1 auto;
+      margin: 0px 0px 30px 0px;
+    }
   }
 
   // .block__item--content
   &__item--content {
     width: 179px;
     height: 57px;
-    background: url('../img/item-icon-1.png') 0 0/contain no-repeat;
+    background: url("../img/item-icon-1.png") 0 0 / contain no-repeat;
   }
 
   // .block__item--text
   &__item--text {
     flex: 0 1 60%;
     margin: 0px 0px 0px 81px;
+    @media (max-width: 992px) {
+      flex: 0 1 auto;
+      margin: 0px 0px 30px 0px;
+    }
   }
 
   // .block__item--title
   &__item--title {
     margin: 0px 0px 15px 0px;
-
+    @media (max-width: 992px) {
+      text-align: center;
+    }
   }
 
   // .block__item--paragraf
@@ -64,10 +98,15 @@
 
   &__item--info {
     position: relative;
-    padding: 0px 0px 0px 14px;
+    padding: 0px 0px 0px 15px;
+    margin: 0px 0px 15px 0px;
+
+    &:last-child {
+      margin: 0px 0px 0px 0px;
+    }
 
     &::before {
-      content: '+';
+      content: "+";
       position: absolute;
       top: 0;
       left: 0;
@@ -75,9 +114,105 @@
     }
   }
 
+  .not {
+    &__text {
+      color: #e46868;
+    }
+
+    &::before {
+      content: "-";
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #e46868;
+    }
+  }
+
   &__catalog--content {
-    background: url('../img/item-icon-2.png') center/contain no-repeat;
+    background: url("../img/item-icon-2.png") center/contain no-repeat;
     width: 85%;
     height: 100%;
+
+    @media (max-width: 992px) {
+      width: 78%;
+    }
+  }
+
+  &__integration {
+    position: relative;
+
+    &--icon-1 {
+      background: url("../img/integration-icon-1.png") 0 0 / contain no-repeat;
+      width: 310px;
+      height: 99px;
+      position: absolute;
+      top: 15px;
+      left: 25px;
+      z-index: 111;
+    }
+
+    &--icon-2 {
+      background: url("../img/integration-icon-2.png") 0 0 / contain no-repeat;
+      width: 165px;
+      height: 78px;
+      position: absolute;
+      top: 119px;
+      left: 35px;
+    }
+
+    &--icon-3 {
+      background: url("../img/integration-icon-3.png") 0 0 / contain no-repeat;
+      width: 183px;
+      height: 193px;
+      position: absolute;
+      top: 41px;
+      right: 21px;
+    }
+
+    &--icon-4 {
+      background: url("../img/integration-icon-4.png") 0 0 / contain no-repeat;
+      width: 186px;
+      height: 75px;
+      position: absolute;
+      top: 215px;
+      left: 32px;
+      z-index: 111;
+    }
+
+    &--icon-5 {
+      background: url("../img/integration-icon-5.png") 0 0 / contain no-repeat;
+      width: 194px;
+      height: 118px;
+      position: absolute;
+      top: 191px;
+      right: 21px;
+    }
+
+    &--icon-6 {
+      background: url("../img/integration-icon-6.png") 0 0 / contain no-repeat;
+      width: 177px;
+      height: 110px;
+      position: absolute;
+      left: 31px;
+      bottom: 52px;
+    }
+
+    &--icon-7 {
+      background: url("../img/integration-icon-7.png") 0 0 / contain no-repeat;
+      width: 146px;
+      height: 27px;
+      position: absolute;
+      right: 79px;
+      bottom: 138px;
+    }
+
+    &--icon-8 {
+      background: url("../img/integration-icon-8.png") 0 0 / contain no-repeat;
+      width: 189px;
+      height: 122px;
+      position: absolute;
+      right: 21px;
+      bottom: 11px;
+    }
   }
 }
