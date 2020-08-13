@@ -120,6 +120,7 @@ h6 {
 
 .btn {
   border-radius: 5px;
+  border: 2px solid #3454f5;
   background-color: #3454f5;
   color: #ffffff;
   font-family: Gilroy;
@@ -128,6 +129,9 @@ h6 {
   line-height: 24px;
   padding: 24px 0px;
   width: 100%;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .section-title {
@@ -747,6 +751,44 @@ body {
   color: #e46868;
 }
 
+.form-block {
+  background: #eff7ff;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  margin: 0px 10px;
+  padding: 20px 11px;
+}
+
+.form-block__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-block__img {
+  max-width: 445px;
+  margin: 0px 65px 0px 0px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+}
+
+.form-block__content {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.form-block__btn:hover {
+  background-color: #fff;
+  border: 2px solid #3454F5;
+  color: #3454F5;
+}
+
 .popup {
   position: fixed;
   z-index: 999;
@@ -1003,6 +1045,17 @@ body {
 
   .block__item--paragraf {
     margin: 0px 0px 15px 0px;
+  }
+
+  .form-block__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .form-block__img {
+    margin: 0px;
   }
 }
 

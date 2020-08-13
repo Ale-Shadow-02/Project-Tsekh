@@ -32,6 +32,7 @@
 }
 
 .block {
+
   // .block__body
   &__body {
     display: flex;
@@ -140,3 +141,80 @@
     color: #e46868;
   }
 }
+
+.form-block {
+  background: #eff7ff;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  margin: 0px 10px;
+  padding: 20px 11px;
+
+  // .form-block__body
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media (max-width:992px) {
+      flex-direction: column;
+    }
+  }
+
+  // .form-block__img
+  &__img {
+    max-width: 445px;
+    margin: 0px 65px 0px 0px;
+    flex: 0 1 40%;
+
+    @media (max-width:992px) {
+      margin: 0px;
+    }
+  }
+
+  // .form-block__content
+  &__content {
+    flex-basis: 50%;
+
+  }
+
+  &__btn {
+    &:hover {
+      background-color: #fff;
+      border: 2px solid #3454F5;
+      color: #3454F5;
+    }
+  }
+}
+
+.form {}
+
+.popup {
+
+  // .popup__form
+  &__form {}
+
+  // .popup__title
+  &__title {}
+
+  // .popup__subtitle
+  &__subtitle {}
+
+  // .popup__block
+  &__block {}
+
+  // .popup__block--item
+  &__block--item {}
+
+  // .popup__btn
+  &__btn {}
+
+  // .popup__politic
+  &__politic {}
+
+  // .popup__polinic--link
+  &__polinic--link {}
+}
+
+.input {}
+
+.btn {}
