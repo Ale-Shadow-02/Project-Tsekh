@@ -789,6 +789,47 @@ body {
   color: #3454F5;
 }
 
+.technology {
+  background-color: #EFF7FF;
+}
+
+.technology__title {
+  margin: 0px 0px 50px 0px;
+}
+
+.technology__body {
+  padding: 46px 10px 114px 10px;
+}
+
+.technology__item {
+  width: 380px;
+  height: 88px;
+  border-radius: 10px;
+  margin: 0px 10px;
+}
+
+.technology__item--wrap {
+  margin: 0px -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.technology__item--vue {
+  background: #fff url("../img/technolgy-icon-1.png") center no-repeat;
+}
+
+.technology__item--django {
+  background: #fff url("../img/technolgy-icon-2.png") center no-repeat;
+}
+
+.technology__item--elastic {
+  background: #fff url("../img/technolgy-icon-3.png") center no-repeat;
+}
+
 .popup {
   position: fixed;
   z-index: 999;
@@ -1064,6 +1105,28 @@ body {
     font-size: 33px;
     line-height: 35px;
   }
+
+  .technology__title {
+    text-align: center;
+  }
+
+  .technology__body {
+    padding: 46px 10px 50px 10px;
+  }
+
+  .technology__item {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .technology__item--wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1251,6 +1314,10 @@ body {
     min-height: 326px;
   }
 
+  .technology__item {
+    width: 300px;
+  }
+
   .popup__block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1272,5 +1339,11 @@ body {
 .webp .offer__cursor{ background: url(../img/cursor.webp) center/cover no-repeat; }
 
 .webp .banner__body{ background: url(../img/banner-bg.webp) 0 0/contain no-repeat; }
+
+.webp .technology__item--vue{ background: #fff url(../img/technolgy-icon-1.webp) center no-repeat; }
+
+.webp .technology__item--django{ background: #fff url(../img/technolgy-icon-2.webp) center no-repeat; }
+
+.webp .technology__item--elastic{ background: #fff url(../img/technolgy-icon-3.webp) center no-repeat; }
 
 .webp .popup__close{ background-image: url(../img/close.webp); }
