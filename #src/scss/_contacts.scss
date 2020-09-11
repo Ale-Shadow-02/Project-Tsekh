@@ -1,0 +1,89 @@
+.contacts {
+  background: #3454f5;
+  padding: 80px 0px 80px 0px;
+
+  // .contacts__title
+  &__title {
+    color: #ffffff;
+    margin: 0px 0px 30px 0px;
+  }
+
+  &__block {
+    &--wrap {
+      display: flex;
+      align-items: center;
+      margin: 0px 0px 50px 0px;
+    }
+  }
+
+  // .contacts__subtitle
+  &__subtitle {
+    font-size: 18px;
+    line-height: 28px;
+    color: #ffffff;
+  }
+
+  // .contacts__size
+  &__size {
+    background: #ffffff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0px 0px 0px 15px;
+    padding: 10px 35px;
+  }
+
+  // .contacts__time
+  &__time {
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0px 0px 0px 20px;
+  }
+}
+
+.form {
+  //.form__block
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px -7px 0px -7px;
+
+    &--politic {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &--btn {
+      background: #ffe818;
+      width: 100%;
+      padding: 20px 0px;
+      margin: 0px 0px 20px 0px;
+      border-radius: 5px;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  // .form-block__block--item
+  &__block--item {
+    flex-basis: 33%;
+    padding: 0px 7px 0px 7px;
+
+    &-politic {
+      flex-basis: 100%;
+    }
+  }
+
+  // .form-block__politic--link
+  &__politic--link {
+    color: #ffe818;
+  }
+}
