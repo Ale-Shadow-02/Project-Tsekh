@@ -1,0 +1,149 @@
+.work {
+  padding: 140px 0px 140px 0px;
+
+  @media (max-width:576px) {
+    padding: 60px 0px 60px 0px;
+  }
+
+  // .work__body
+  &__body {
+    padding: 0px 10px 0px 10px;
+  }
+
+  // .work__title
+  &__title {
+    margin: 0px 0px 50px 0px;
+
+    &--descr {
+      font-size: 18px;
+      line-height: 28px;
+      margin: 0px 0px 40px 0px;
+    }
+  }
+
+  &-services {
+    &__item {
+      position: relative;
+
+      &--menu {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+      }
+
+      &--title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        margin: 0px 0px 20px 0px;
+      }
+    }
+
+    &--arrow {
+      width: 80px;
+      height: 80px;
+      background: #3454F5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+
+}
+
+.slide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0px 140px 0px;
+
+  @media (max-width:992px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  // .slide__img
+  &__img {
+    max-width: 1180px;
+    height: 360px;
+    flex: 0 1 100%;
+    margin: 0px 0px 40px 0px;
+  }
+
+  // .slide__descr
+  &__descr {
+    flex: 0 1 447px;
+    font-size: 18px;
+    line-height: 28px;
+
+    @media (max-width:992px) {
+      flex: 0 1 100%;
+    }
+
+  }
+
+  // .slide__curator
+  &__curator {
+    flex: 0 1 520px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width:992px) {
+      flex: 0 1 100%;
+    }
+
+
+    &--img {
+      width: 101px;
+      height: 101px;
+      border-radius: 50%;
+
+      @media (max-width:576px) {
+        width: 210px;
+      }
+
+    }
+
+    &--descr {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+      margin: 0px 0px 0px 31px;
+
+      @media (max-width:576px) {
+        margin: 0px 0px 0px 15px;
+      }
+    }
+  }
+}
+
+.item {
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+
+    &:nth-last-child() {
+      margin: 0px 0px 0px -8px;
+    }
+
+
+    &--list {
+      margin: 0px 0px 8px 0px;
+    }
+
+    &--link {
+      font-size: 12px;
+      line-height: 16px;
+      background: #FFFFFF;
+      border-radius: 4px;
+      padding: 4px 8px;
+      margin: 0px 0px 0px 8px;
+    }
+  }
+}
