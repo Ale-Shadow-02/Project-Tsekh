@@ -24,19 +24,22 @@
   &-services {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0px -10px 0px -10px;
-    @media (max-width: 992px) {
+    @media (max-width: 576px) {
       flex-direction: column;
       align-items: center;
     }
 
     &__item {
-      width: 380px;
       height: 460px;
       position: relative;
-      flex: 0 0 33.3%;
+      flex: 0 0 400px;
       padding: 0px 10px 0px 10px;
+      margin: 0px 0px 40px 0px;
+      @media (max-width: 576px) {
+        flex: 0 0 100%;
+      }
 
       &--menu {
         position: absolute;
@@ -75,6 +78,9 @@
   @media (max-width: 992px) {
     flex-direction: column;
     align-items: flex-start;
+  }
+  @media (max-width: 576px) {
+    margin: 0px 0px 40px 0px;
   }
 
   // .slide__img
