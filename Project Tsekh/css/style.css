@@ -1366,6 +1366,82 @@ body {
   padding: 4px 8px;
 }
 
+.footer {
+  background: #2E3646;
+  padding: 80px 0px;
+}
+
+.footer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 10px 0px 10px;
+}
+
+.footer__logo {
+  margin: 0px 0px 80px 10px;
+}
+
+.footer__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+}
+
+.footer__item--social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__item--title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #ffffff;
+  margin: 0px 0px 16px 0px;
+}
+
+.footer__item--text {
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  margin: 0px 0px 12px 0px;
+}
+
+.mail {
+  background: url("../img/footer-mail.png") center left no-repeat;
+  padding: 0px 0px 0px 32px;
+}
+
+.mail > a {
+  color: #ffffff;
+}
+
+.phone {
+  background: url("../img/footer-phone.png") center left no-repeat;
+  padding: 0px 0px 0px 32px;
+}
+
+.phone > a {
+  color: #ffffff;
+}
+
+.item__box {
+  margin: 0px 16px 0px 0px;
+}
+
+.footer-bottom {
+  background: #ffffff;
+  width: 100%;
+  height: 65px;
+}
+
 @media (max-width: 1500px) {
   .offer__text {
     -webkit-box-flex: 0;
@@ -1554,6 +1630,13 @@ body {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
+  }
+
+  .footer__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    margin: 0px 0px 40px 0px;
   }
 }
 
@@ -1860,6 +1943,22 @@ body {
   .slide__curator--descr {
     margin: 0px 0px 0px 15px;
   }
+
+  .footer {
+    padding: 40px 0px 40px 0px;
+  }
+
+  .footer__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+}
+
+@media (max-width: 576px) and (max-width: 576px) {
+  .footer__logo {
+    margin: 0px 0px 40px 0px;
+  }
 }
 
 .webp .offer__block{ background: url(../img/header-bg.webp) 0 0 no-repeat; }
@@ -1885,3 +1984,7 @@ body {
 .webp .item__arrow{ background: url(../img/cases-arrow.webp) center no-repeat; }
 
 .webp .popup__close{ background-image: url(../img/close.webp); }
+
+.webp .mail{ background: url(../img/footer-mail.webp) center left no-repeat; }
+
+.webp .phone{ background: url(../img/footer-phone.webp) center left no-repeat; }
