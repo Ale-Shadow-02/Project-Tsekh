@@ -1,8 +1,8 @@
 .footer {
-  background: #2E3646;
+  background: #2e3646;
   padding: 80px 0px;
 
-  @media (max-width:576px) {
+  @media (max-width: 576px) {
     padding: 40px 0px 40px 0px;
   }
 
@@ -16,8 +16,8 @@
   &__logo {
     margin: 0px 0px 80px 10px;
 
-    @media (max-width:576px) {
-      @media (max-width:576px) {
+    @media (max-width: 576px) {
+      @media (max-width: 576px) {
         margin: 0px 0px 40px 0px;
       }
     }
@@ -26,20 +26,18 @@
   &__item {
     flex: 0 1 25%;
 
-    @media (max-width:992px) {
+    @media (max-width: 992px) {
       flex: 0 1 50%;
       margin: 0px 0px 40px 0px;
     }
 
-    @media (max-width:576px) {
+    @media (max-width: 576px) {
       flex: 0 1 100%;
     }
 
     &--social {
       display: flex;
     }
-
-    &--content {}
 
     &--title {
       font-weight: 700;
@@ -59,19 +57,19 @@
 }
 
 .mail {
-  background: url('../img/footer-mail.png') center left no-repeat;
+  background: url("../img/footer-mail.png") center left no-repeat;
   padding: 0px 0px 0px 32px;
 
-  &>a {
+  & > a {
     color: #ffffff;
   }
 }
 
 .phone {
-  background: url('../img/footer-phone.png') center left no-repeat;
+  background: url("../img/footer-phone.png") center left no-repeat;
   padding: 0px 0px 0px 32px;
 
-  &>a {
+  & > a {
     color: #ffffff;
   }
 }
